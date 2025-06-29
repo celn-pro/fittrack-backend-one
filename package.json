@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "build": "echo 'Using ts-node for Railway deployment'",
-    "start": "NODE_ENV=production ts-node --project tsconfig.railway.json src/server.ts",
+    "start": "NODE_ENV=production ts-node --project tsconfig.railway.json --transpile-only src/server.ts",
     "build:dev": "tsc",
     "start:dev": "NODE_ENV=development ts-node-dev --respawn --transpile-only src/server.ts",
     "start:prod": "NODE_ENV=production npm run build && npm start",
