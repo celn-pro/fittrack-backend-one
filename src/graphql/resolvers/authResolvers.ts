@@ -1,6 +1,6 @@
 import { AuthService, RegisterInput, LoginInput } from '../../services/AuthService';
 import { IUserDocument } from '../../models/UserSchema';
-import { AuthenticationError, ForbiddenError, UserInputError } from 'apollo-server-express';
+import { AuthenticationError, UserInputError } from 'apollo-server-express';
 
 // Initialize auth service
 const authService = new AuthService();

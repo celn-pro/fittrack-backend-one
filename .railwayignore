@@ -1,0 +1,39 @@
+# Development files
+.env.development
+.env.local
+.env.test
+
+# Development dependencies and tools
+node_modules/.cache
+*.log
+logs/
+coverage/
+.nyc_output/
+
+# Test files
+src/tests/
+scripts/test-*.ts
+scripts/debug-*.ts
+scripts/demo-*.ts
+test-*.js
+
+# Development tools
+.eslintrc.js
+jest.config.js
+tsconfig.json
+.gitignore
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp

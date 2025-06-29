@@ -42,7 +42,7 @@ async function startServer() {
   }));
 
   // Health check endpoint
-  app.get('/health', async (req, res) => {
+  app.get('/health', async (_req, res) => {
     const dbHealth = await databaseService.healthCheck();
     res.json({
       status: dbHealth.status === 'healthy' ? 'healthy' : 'degraded',
@@ -78,7 +78,7 @@ async function startServer() {
   server.applyMiddleware({ app: app as any, path: '/graphql' });
 
   // API info endpoint
-  app.get('/api/info', (req, res) => {
+  app.get('/api/info', (_req, res) => {
     res.json({
       name: 'FitTrack Backend API',
       version: '1.0.0',
@@ -104,7 +104,7 @@ async function startServer() {
   });
 
   // Error handling middleware
-  app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  app.use((err: Error, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
     console.error('Unhandled error:', err);
     res.status(500).json({
       error: 'Internal server error',
